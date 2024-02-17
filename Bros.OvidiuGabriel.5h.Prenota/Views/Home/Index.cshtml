@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Utente";
+
+
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Registrazione Utenti</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1>Registrazione Utenti</h1>
+            <div>
+                <label>Nome:</label>
+                <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
+            </div>
+            <div>
+                <label>Cognome:</label>
+                <asp:TextBox ID="txtCognome" runat="server"></asp:TextBox>
+            </div>
+            <div>
+                <label>Email:</label>
+                <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            </div>
+            <div>
+                <label>Città:</label>
+                <asp:TextBox ID="txtCitta" runat="server"></asp:TextBox>
+            </div>
+            <div>
+                <asp:Button ID="btnSubmit" runat="server" Text="Registra" OnClick="btnSubmit_Click" />
+            </div>
+            <div>
+                <asp:GridView ID="gvUtenti" runat="server" AutoGenerateColumns="false">
+                    <Columns>
+                        <asp:BoundField DataField="Nome" HeaderText="Nome" />
+                        <asp:BoundField DataField="Cognome" HeaderText="Cognome" />
+                        <asp:BoundField DataField="EMail" HeaderText="Email" />
+                        <asp:BoundField DataField="Citta" HeaderText="Città" />
+                    </Columns>
+                </asp:GridView>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
